@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>position task</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h3>Contact Us</h3>
+    </header>
+<div class="container">
+    <div class="buttonm-container">
+        
+            <button class="mybtn" >Click Here</button>
+
+    </div>
+    
+    <div class="popup-container">
+
+        <div class="form-container">
+            
+            <form id="myModal">
+                <button class="butter"><i class="fa-solid fa-circle-xmark"></i></button>
+                <div class="con">
+                    <input type="text" name="name" id="name">
+                    <label for="name">Name:</label> <br><br>
+                </div>
+                <div class="con">
+                    <input type="email" name="email" id="email">
+                    <label for="email">email:</label> <br><br>
+                </div>
+                <div class="con">
+                    <textarea name="msg" id="msg"></textarea>
+                    <label for="name">Message:</label> 
+                </div>
+                <div class="con">
+                    <input type="submit" name="submit" value="submit" id="lsub">
+                </div>
+            </form>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script>
+        var modal = document.getElementsByClassName("popup-container")[0];
+        var btn = document.getElementsByClassName("mybtn")[0];
+        var span = document.getElementsByClassName("butter")[0];
+        console.log(modal);
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+    
+         span.onclick = function() {
+             modal.style.display = "none";
+        }
+    
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
+    
+    </body>
+    </html>
+</body>
+</html>
